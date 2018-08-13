@@ -56,51 +56,6 @@ def all_winter_holiday_supplies(holiday_hash)
   end.flatten
 end
 
-def all_supplies_in_holidays(holiday_hash)
-  # iterate through holiday_hash and print items such that your readout resembles:
-  # Winter:
-  #   Christmas: Lights, Wreath
-  #   New Years: Party Hats
-  # Summer:
-  #   Fourth Of July: Fireworks, BBQ
-  # etc.
-
-
-  # iterate through first layer of hashes and output each season as a string
-  holiday_hash.each do |season, holiday_hash|
-    puts "#{season.to_s.capitalize}:"
-
-    # iterate through second layer of hashes
-    holiday_hash.each do |holiday, supplies|
-
-       # convert to string and capitalize holiday name (prepare so we can print)
-       str_array = holiday.to_s.split("_")
-
-
-  holiday_hash.each do |season, holiday_hash|
-    puts "#{season.to_s.capitalize}:"
-    holiday_hash.each do |holiday, supplies|
-       # convert to string and capitalize holiday name (prepare so we can print)
-       str_array = holiday.to_s.split(" ")
-       binding.pry
-       str_array.each {|string| string.capitalize!}
-       holiday_str = str_array.join(" ")
-
-       # convert the array of supplies into a string
-       supplies_str = supplies.join(", ")
-
-       # output holiday and supplies
-       puts "  #{holiday_str}: #{supplies_str}"
-
-
-    end
-
-
-    end
-
-  end
-
-end
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
