@@ -37,7 +37,7 @@ def add_supply_to_memorial_day(holiday_hash, supply)
   holiday_hash.each do |season, holiday_names_hash|
     holiday_hash.each do |holiday_names_hash, supplies|
       if holiday == :memorial_day
-        supplies >> supply
+        supplies << supply
       end
     end
   end
